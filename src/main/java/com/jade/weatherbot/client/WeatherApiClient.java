@@ -16,10 +16,10 @@ public class WeatherApiClient {
 
     public String getCurrentWeather() {
 
-        String apiKey = "fc985df28c08edf616fd1f834821d3bb"; //รอใส่ key จริง
+        String apiKey = "0053d3a0189af5f83881d74f907380c1"; //รอใส่ key จริง
         String city = "Bangkok";
 
-        String url = "https://api.openweathermap.org/data/2.5/weather"
+        String url = "http://api.openweathermap.org/data/2.5/weather"
                 + "?q=" + city
                 + "&appid=" + apiKey
                 + "&units=metric";
