@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: line-weather-bot
