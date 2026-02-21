@@ -1,14 +1,14 @@
-package com.jade.weatherbot.dto.error;
+package com.jade.weatherbot.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
-import java.util.List;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
-public class ErrorResponse {
+public class ErrorDetail {
+
     private String code;
     private String message;
-    private List<FieldErrorResponse> fields;
 }
