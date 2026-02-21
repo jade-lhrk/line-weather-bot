@@ -16,7 +16,7 @@ public class AirPollutionService {
 
         return response.getList()
                 .get(0)
-                .getMain()
+                .getComponents()
                 .getPm2_5();
     }
 }

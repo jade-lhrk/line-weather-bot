@@ -15,7 +15,7 @@ public class AirPollutionApiClient {
     private String apiKey;
 
     private static final String URL =
-            "https://api.openweathermap.org/data/2.5/air_pollution";
+            "http://api.openweathermap.org/data/2.5/air_pollution";
 
     public AirPollutionResponse getAirPollution(double lat, double lon) {
 
