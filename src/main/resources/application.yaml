@@ -1,3 +1,7 @@
 spring:
   application:
     name: line-weather-bot
+
+weather:
+  api:
+    key: 0053d3a0189af5f83881d74f907380c1

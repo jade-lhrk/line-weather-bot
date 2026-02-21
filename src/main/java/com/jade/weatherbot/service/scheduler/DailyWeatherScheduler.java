@@ -1,5 +1,6 @@
 package com.jade.weatherbot.service.scheduler;
 
+import com.jade.weatherbot.service.AirPollutionService;
 import com.jade.weatherbot.service.WeatherService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Component;
 public class DailyWeatherScheduler {
 
     private final WeatherService weatherService;
+    private final AirPollutionService airService;
 
     @Scheduled(cron = "*/10 * * * * *")
     public void sendDailyWeatherReport() {
@@ -21,6 +23,13 @@ public class DailyWeatherScheduler {
         var weather = weatherService.getWeather("Bangkok");
 
         log.info("Weather today: {}", weather);
+
+        double lat = 13.736717;
+        double lon = 100.523186;
+
+        double pm25 = airService.getPm25(lat, lon);
+
+        log.info("PM2.5 today: {}", pm25);
 
     }
 }
