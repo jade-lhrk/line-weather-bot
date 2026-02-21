@@ -5,3 +5,7 @@ spring:
 weather:
   api:
     key: 0053d3a0189af5f83881d74f907380c1
+
+line:
+  bot:
+    token: yjVOlFbCcEmGujFKh0ojXjNX9bG3ocEj7HM5aaXWo8cO7ZrycEtq6YAw6XCWx2LVGq4lanBdGvsOPBn7T8kmXrhqG9O86NiuFcMZlJTor0CmFIu01n7MuvQbZbHVA5qQ/j7oZcehgnm7fxwuL89VvgdB04t89/1O/w1cDnyilFU=
