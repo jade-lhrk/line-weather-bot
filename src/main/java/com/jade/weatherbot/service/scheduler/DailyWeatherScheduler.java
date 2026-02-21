@@ -1,6 +1,7 @@
 package com.jade.weatherbot.service.scheduler;
 
 import com.jade.weatherbot.service.AirPollutionService;
+import com.jade.weatherbot.service.DailyReportFormatter;
 import com.jade.weatherbot.service.WeatherService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,6 +15,7 @@ public class DailyWeatherScheduler {
 
     private final WeatherService weatherService;
     private final AirPollutionService airService;
+    private final DailyReportFormatter formatter;
 
     @Scheduled(cron = "*/10 * * * * *")
     public void sendDailyWeatherReport() {
@@ -29,7 +31,9 @@ public class DailyWeatherScheduler {
 
         double pm25 = airService.getPm25(lat, lon);
 
-        log.info("PM2.5 today: {}", pm25);
+        String report = formatter.format(weather, pm25);
+
+        log.info("PM2.5 today: {}", report);
 
     }
 }
