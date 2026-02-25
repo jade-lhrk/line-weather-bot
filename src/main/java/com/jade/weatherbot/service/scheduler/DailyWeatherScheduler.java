@@ -20,7 +20,7 @@ public class DailyWeatherScheduler {
     private final LineMessagingClient lineClient;
     private static final String USER_ID = "Ubb745616cacb6a19c7713e35e6000abf";
 
-    @Scheduled(cron = "*/10 * * * * *")
+    @Scheduled(cron = "0 0 * * * *")
     public void sendDailyWeatherReport() {
 
         log.info("Running daily weather scheduler...");
